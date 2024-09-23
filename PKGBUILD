@@ -5,7 +5,7 @@ pkgver=1.5
 pkgrel=5
 pkgdesc="Enemy Territory: Quake Wars is a commercial team and class-based multiplayer game. You need the retail DVD to play."
 arch=('i686' 'x86_64')
-url="https://zerowing.idsoftware.com/linux/etqw/ETQWFrontPage/index.html"
+url="https://www.splashdamage.com/games/enemy-territory-quake-wars/"
 license=('custom')
 depends_x86_64=('lib32-alsa-lib' 'lib32-libgl' 'lib32-sdl' 'lib32-gcc-libs' 'lib32-zlib' 'lib32-libjpeg')
 depends_i686=('libgl' 'sdl' 'gcc-libs' 'zlib' 'libjpeg')
@@ -13,7 +13,7 @@ makedepends=('unzip')
 conflicts=('bin32-etqw')
 install='etqw.install'
 source=('etqw.launcher' 'etqw-rthread.launcher' 'etqwded.launcher' 'etqw.desktop' \
-"https://aur.slashbunny.com/etqw/ETQW-client-${pkgver}-full.x86.run")
+"https://cdn.splashdamage.com/downloads/games/etqw/ETQW-client-${pkgver}-full.x86.run")
 sha256sums=('79393825ab93bb9cecee69ad6ddafdaef3526bf9f757023325bfffc228ad920c'
             '38140d4465f7e337e4e079150576abaed9ed8cd51b4092b434a7d6ae619998b4'
             '74887f52f0a82fe241bd5a99a1287c26c3c52ef4314cf6720cf3f59c9ad3a62e'
@@ -25,7 +25,7 @@ package() {
     install -d ${pkgdir}/opt/
 
     # Unzip Linux Client Data
-    sh -c "unzip -o ${srcdir}/ETQW-client-${pkgver}-linux.x86.run -d ${srcdir}/ data/*; true"
+    sh -c "unzip -o ${srcdir}/ETQW-client-${pkgver}-full.x86.run -d ${srcdir}/ data/*; true"
 
     # Move Linux Client Data to Destination Directory
     mv ${srcdir}/data ${pkgdir}/opt/etqw

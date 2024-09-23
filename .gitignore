@@ -1,4 +1,4 @@
 src/
 pkg/
-*.pkg.tar
+*.pkg.tar.zst
 ETQW-client-1.5-full.x86.run
