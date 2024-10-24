@@ -29,6 +29,6 @@ pkgbase = etqw
 	depends_x86_64 = lib32-sdl
 	depends_x86_64 = lib32-gcc-libs
 	depends_x86_64 = lib32-zlib
-	depends_x86_64 = lib32-libjpeg
+	depends_x86_64 = lib32-libjpeg-turbo
 
 pkgname = etqw

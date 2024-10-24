@@ -7,18 +7,18 @@ pkgdesc="Enemy Territory: Quake Wars is a commercial team and class-based multip
 arch=('i686' 'x86_64')
 url="https://www.splashdamage.com/games/enemy-territory-quake-wars/"
 license=('custom')
-depends_x86_64=('lib32-alsa-lib' 'lib32-libgl' 'lib32-sdl' 'lib32-gcc-libs' 'lib32-zlib' 'lib32-libjpeg')
+depends_x86_64=('lib32-alsa-lib' 'lib32-libgl' 'lib32-sdl' 'lib32-gcc-libs' 'lib32-zlib' 'lib32-libjpeg-turbo')
 depends_i686=('libgl' 'sdl' 'gcc-libs' 'zlib' 'libjpeg')
 makedepends=('unzip')
 conflicts=('bin32-etqw')
 install='etqw.install'
 source=('etqw.launcher' 'etqw-rthread.launcher' 'etqwded.launcher' 'etqw.desktop' \
 "https://cdn.splashdamage.com/downloads/games/etqw/ETQW-client-${pkgver}-full.x86.run")
-sha256sums=('79393825ab93bb9cecee69ad6ddafdaef3526bf9f757023325bfffc228ad920c'
-            '38140d4465f7e337e4e079150576abaed9ed8cd51b4092b434a7d6ae619998b4'
-            '74887f52f0a82fe241bd5a99a1287c26c3c52ef4314cf6720cf3f59c9ad3a62e'
-            'ed85a82636aed87c54268d84f0f7e09a0a7a37b0def9415fd8791684c5e90288'
-            '827395c5ad7bff36a8456f7f210ab43b8cc2b0d18e9f366d15ff4f11eacfc4c5')
+b2sums=('b7b90b109afed76ffefed720bd9785ff5d5813add95cdcbd0d65876240f7b05fe667b98ee8baa47ef5f5a725e9348f19ff34964b8f62f2c2f1d353e1157a6626'
+        '1cdcc71bf92fb3300023ba3a1c64bc234a5f46eede5479f9818022c9e5a726303850014b958ebcff78129bbf510642b7aa8b3d76d109bc94e229c5aa9eb90a8a'
+        '56159047689fbb29a10e5aecd30d311035fff12f65af58b380cde57d6db10396192afeadba04bd2c7772c89ee54c26786ad11af352f8dc45c255b72bb3c455a9'
+        'c60641b8c1beee8636c5a1077ccb420838e8c6a2ae60f17a604b6ea78574600bfc55693438b32fb7d2d91b11f50d8404e18d3afc612cd09159923d3555154fae'
+        '8fcaa8518c7c452a4fe593a00beea0f5a6d5849c72b03d4a443fffde8540ea53b7bf0376d90b2f2ed4e3a736628f8871e009a49b938344516b2db0495cf1e826')
 
 package() {
     # Create Destination Directories
